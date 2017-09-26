@@ -1,0 +1,1025 @@
+// Variables
+@import "_vars"
+
+// Style reset
+@import "_reset"
+
+body
+  min-width: 1170px
+  overflow-x: hidden 
+
+.container
+  margin: 0 auto
+  width: 1170px
+  box-sizing: border-box
+  position: relative
+
+header
+  position: relative
+
+  a
+    &.main-link
+      text-shadow: 1px 1px 5px rgba(39, 39, 39, 0.38)
+
+  .extra-element
+    position: absolute
+    display: block
+    bottom: 0px
+    transform-origin: bottom left
+
+    &#extra1
+      transform: scale(1, .15)
+
+    &#extra2
+      transform: scale(.3, .3)
+      bottom: -6px
+  
+  &.album-header
+    min-height: 650px
+    background:
+      image: url(../images/d_1920-min.jpg)
+      size: cover
+      position: left top
+
+    nav
+      display: flex
+      justify-content: space-around
+      align-items: center
+      padding: 15px
+
+      a
+        &.main-link
+          display: block
+          width: 20%
+          text-align: center
+          flex: 1
+
+          color: $text-color-light
+          font:
+            size: 16px
+            weight: bolder
+            variant: small-caps
+
+        &.logo-wrap
+            max-width: 500px
+            flex: 2
+
+            .logo
+              width: 80%
+              display: block
+              margin: 0 auto
+
+    .slogan
+      padding-top: 10%
+      max-width: 47%
+      height: 100%
+      margin-left: 7%
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+      text-shadow: 1px 1px 2px rgba(39, 39, 39, 0.67)
+      
+      h1
+        text-transform: uppercase
+        color: $text-color-light
+        font:
+          size: 64px
+          weight: 100
+
+      span
+        color: $text-color-light
+        letter-spacing: .05em
+        align-self: flex-end
+        font:
+          size: 25px
+          variant: small-caps
+
+  &.services-header
+    min-height: 650px
+    background:
+      image: url(../images/c_1920-min.jpg)
+      size: cover
+      position: center top
+
+    nav
+      display: flex
+      justify-content: space-around
+      align-items: center
+      padding: 15px
+
+      a
+        &.main-link
+          display: block
+          width: 20%
+          text-align: center
+          flex: 1
+
+          color: $text-color-light
+          font:
+            size: 16px
+            weight: bolder
+            variant: small-caps
+
+        &.logo-wrap
+            max-width: 500px
+            flex: 2
+
+            .logo
+              width: 80%
+              display: block
+              margin: 0 auto
+    
+    .slogan
+      padding-top: 10%
+      max-width: 48%
+      height: 100%
+      margin-left: 10%
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+      text-shadow: 1px 1px 2px rgba(39, 39, 39, 0.67)
+      
+      h1
+        text-transform: uppercase
+        font-weight: 100
+        color: $text-color-light
+        align-self: flex-end
+        font:
+          size: 64px
+
+      span
+        color: $text-color-light
+        align-self: flex-start
+        letter-spacing: .05em
+        font:
+          size: 26px
+          variant: small-caps
+
+  &.about-header
+    min-height: 650px
+    background:
+      image: url(../images/a_1920-min.jpg)
+      size: cover
+      position: left top
+
+    nav
+      display: flex
+      justify-content: space-around
+      align-items: center
+      padding: 15px
+
+      a
+        &.main-link
+          display: block
+          width: 20%
+          text-align: center
+          flex: 1
+
+          color: $text-color-light
+          font:
+            size: 16px
+            weight: bolder
+            variant: small-caps
+
+        &.logo-wrap
+            max-width: 500px
+            flex: 2
+
+            .logo
+              width: 80%
+              display: block
+              margin: 0 auto
+
+    .slogan
+      padding-top: 10%
+      max-width: 50%
+      height: 100%
+      margin-left: 30%
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+      text-shadow: 1px 1px 2px rgba(39, 39, 39, 0.67)
+      
+      h1
+        text-transform: uppercase
+        color: $text-color-light
+        align-self: flex-end
+        font:
+          size: 64px
+          weight: 100
+
+      span
+        color: $text-color-light
+        align-self: flex-end
+        text-align: right
+        letter-spacing: .05em
+        font:
+          size: 18px
+          variant: small-caps
+
+
+  &.main-header
+    height: 100vh
+    min-height: 940px
+    background:
+      image: url(../images/home_1920-min.jpg)
+      size: cover
+      position: center top
+
+    nav
+      display: flex
+      justify-content: space-around
+      align-items: center
+      padding: 15px
+
+      a
+        &.main-link
+          display: block
+          width: 20%
+          text-align: center
+          flex: 1
+
+          color: $text-color-light
+          font:
+            size: 16px
+            weight: bolder
+            variant: small-caps
+
+        &.logo-wrap
+            max-width: 500px
+            flex: 2
+
+            .logo
+              width: 80%
+              display: block
+              margin: 0 auto
+
+        // &::before
+        //   content: ""
+        //   display: block
+        //   width: 25%
+        //   position: absolute
+        //   left: 25%
+        //   bottom: -2px
+        //   border: 1px solid black
+        
+        // &::after
+        //   content: ""
+        //   display: block
+        //   width: 25%
+        //   position: absolute
+        //   right: 25%
+        //   bottom: -2px
+        //   border: 1px solid red
+        //   transition: all 1s
+
+        // &:hover
+        //   width: 50%
+          
+
+    .slogan
+      padding-top: 10%
+      max-width: 50%
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+      text-shadow: 1px 1px 2px rgba(39, 39, 39, 0.67)
+      
+      h1
+        text-transform: uppercase
+        color: $text-color-light
+        align-self: flex-end
+        font:
+          size: 64px
+          weight: 100
+
+      span
+        color: $text-color-light
+        align-self: flex-end
+        letter-spacing: .05em
+        font:
+          size: 26px
+          variant: small-caps
+
+section
+
+  h2
+    text-align: center
+    color: #4f4f4f
+
+  .section-quote
+    text-align: center
+    color: #929292
+
+  &.album-section
+    .container
+      padding: 50px 0 80px 0
+      overflow-x: hidden
+      z-index: 10
+      width: 100%
+      background-color: #f8f8f8
+
+      h2::after
+        content: ""
+        display: block
+        width: 100px
+        height: 2px
+        background-color: #F3CFBD
+        margin: 15px auto
+
+    .extra-block
+      height: 500px
+      width: 100%
+      position: absolute
+
+      &::before
+        content: ""
+        display: block
+        position: absolute
+        width: 100%
+        height: 100%
+        z-index: 5
+        background-color: $bg-color-light
+        transform: matrix(1,.05,0,1.2,0,0)
+        box-shadow: 0px 0px 8px $bg-color-dark
+
+      &::after
+        content: ""
+        display: block
+        position: absolute
+        width: 85%
+        height: 100%
+        z-index: 4
+        background-color: $bg-color-semilight
+        transform: matrix(1,.05,0,1.2,0,-10)
+        box-shadow: 4px -1px 4px $bg-color-dark
+        right: 0
+
+    .grid
+      margin: 50px auto    
+
+      .grid-item
+        margin-bottom: 10px
+        width: 320px
+
+  &.services-section
+    .container
+      padding: 20px 150px 40px 150px
+      overflow-x: hidden
+      z-index: 10
+
+    .service-info  
+      position: relative
+
+      &::before
+        content: ""
+        display: block
+        position: absolute
+        width: 100%
+        height: 100%
+        z-index: 5
+        background-color: $bg-color-light
+        transform: matrix(1,.05,0,1.1,0,0)
+        box-shadow: 0px 0px 8px $bg-color-dark
+
+      &::after
+        content: ""
+        display: block
+        position: absolute
+        width: 85%
+        height: 100%
+        z-index: 4
+        background-color: $bg-color-semilight
+        transform: matrix(1,.05,0,1.1,0,-10)
+        box-shadow: 4px -1px 4px $bg-color-dark
+        right: 0
+        top: 0
+
+      .service-upper
+        h2
+          text-align: center
+          color: $text-color-dark
+
+          &::after
+            content: ""
+            display: block
+            width: 100px
+            background-color: #F3CFBD
+            height: 2px
+            margin: 15px auto 15px auto
+
+        p
+          text-align: center
+          color: $text-color-semidark
+
+      .service-wrap
+        margin-top: 100px
+        display: flex
+        justify-content: space-between
+
+        .service
+          max-width: 30%
+          box-sizing: border-box
+
+          .service-icon
+            width: 50%
+            display: block
+            margin: 0 auto
+            opacity: .6
+          
+          .service-name
+            text-align: center
+            color: $text-color-dark
+
+          .price
+            text-align: center
+            font-size: 1.8em
+            color: #ED4009
+
+          .service-list
+            list-style: none
+
+            li
+              margin: 10px auto
+              text-align: center
+              color: $text-color-semidark
+              width: 90%
+              font-size: .9em
+
+              &:first-child
+                font-size: 1.2em
+                color: $text-color-dark
+                width: 100%
+
+      .service-extra
+        margin-top: 50px
+        padding: 15px
+
+        p
+          font-size: 1.2em
+          color: $text-color-dark
+
+        ul
+          margin-top: 30px
+          font-size: .8em
+          color: $text-color-semidark 
+          list-style: none
+          font-style: italic
+
+    .service-special
+      padding-top: 80px
+      padding-bottom: 80px
+
+      .etc, .edu
+        display: flex
+        margin-top: 80px
+        justify-content: center
+        align-items: center
+
+        .spec-icon
+          opacity: .6
+
+        .info
+          margin-left: 30px
+          width: 70%
+
+          h2
+            color: $text-color-dark
+            display: inline-block
+
+            &::after
+              content: ""
+              display: block
+              width: 100px
+              left: 50%
+              height: 2px
+              background-color: #F3CFBD
+              margin: 10px auto
+
+          ul 
+            list-style: none
+            color: $text-color-semidark
+            font-size: .9em
+
+            li
+              margin-top: 5px
+
+
+  &.team-section
+    .container
+      overflow-x: hidden
+      padding: 20px 150px 40px 150px
+      z-index: 10
+
+    .person
+      display: flex
+      position: relative
+      flex-direction: column
+      justify-content: space-between
+      text-align: center
+      align-content: center
+
+      &::before
+        content: ""
+        display: block
+        position: absolute
+        width: 100%
+        height: 100%
+        z-index: 5
+        background-color: $bg-color-light
+
+      &::after
+        content: ""
+        display: block
+        position: absolute
+        width: 85%
+        height: 100%
+        z-index: 4
+        background-color: $bg-color-semilight
+
+      &-left
+        &::before
+          transform: matrix(1,-.05,0,1.2,0,0)
+          box-shadow: 0px 0px 8px $bg-color-dark
+        &::after
+          transform: matrix(1,-.05,0,1.2,-200,0)
+          box-shadow: -4px -1px 4px $bg-color-dark
+
+      &-right
+        &::before
+          transform: matrix(1,.05,0,1.2,0,0)
+          box-shadow: 0px 0px 8px $bg-color-dark
+        &::after
+          transform: matrix(1,.05,0,1.2,0,-10)
+          box-shadow: 4px -1px 4px $bg-color-dark
+          right: 0
+          
+      .person-name
+        color: $text-color-dark
+        font-family: "Geometria", serif
+
+      .person-status
+        color: $text-color-fadedaccent
+        text-transform: uppercase
+        font-family: "Geometria", serif
+        font-size: .7em
+        letter-spacing: .3em
+        margin: 10px
+
+        &:after
+          content: ""
+          display: block
+          width: 100px
+          height: 2px
+          margin: 15px auto 15px auto
+          background-color: $text-color-fadedaccent
+
+      .person-info
+        display: flex
+        margin-top: 40px
+        height: 400px
+        justify-content: space-around
+
+        &-right
+          .person-img
+            order: 2
+
+          .person-text
+            order: 1
+
+        &-left
+          .person-img
+            order: 1
+
+          .person-text
+            order: 2
+
+        .person-img
+          display: block
+          width: 30%
+          min-height: auto
+          max-height: 500px
+          background: 
+            size: cover
+
+        .person-text
+          width: 50%
+          display: flex
+          flex-direction: column
+        
+          .person-quote
+            text-align: justify
+            color: $text-color-semidark
+            text-indent: 20px
+            font:
+              style: italic
+              size: 16px
+
+    .quote-spacing
+      height: 600px
+      background-size: cover
+      //background-position: center center
+      background-attachment: fixed
+      background-repeat: no-repeat
+      transition: background-position
+
+      .container
+        display: flex
+        flex-direction: column
+        justify-content: center
+        height: 100%
+
+      .quote
+        max-width: 400px
+        display: flex
+        position: relative
+        align-items: center
+        justify-content: 
+        padding: 20px 30px
+        box-sizing: border-box
+        background-color: rgba(#6C6C6C, .5)
+
+        &-left
+          align-self: flex-start
+
+        &-right
+          align-self: flex-end
+
+        &::before
+          position: absolute
+          content: ""
+          display: block
+          width: 25%
+          height: 40%
+          top: 0
+          left: 0
+          border:
+            left: solid 10px $darkener-color
+            top: solid 4px $darkener-color
+
+        &::after
+          position: absolute
+          content: ""
+          display: block
+          width: 25%
+          height: 40%
+          right: 0
+          bottom: 0
+          border:
+            right: solid 10px $darkener-color
+            bottom: solid 4px $darkener-color
+
+        p
+          color: $text-color-light
+          text-align: justify
+          font-size: 14px
+          font-style: italic
+          text-indent: 36px
+
+          big
+            font-size: 16px
+            font-weight: 600
+            font-style: normal
+
+
+  &.portfolio-section
+    .container
+      padding-top: 5%
+      padding-bottom: 12%
+      overflow-x: hidden
+
+      h2::after
+        content: ""
+        display: block
+        width: 100px
+        height: 2px
+        background-color: #F3CFBD
+        margin: 15px auto
+
+      .portfolio-slide
+        margin-top: 5%
+        display: flex
+        position: relative
+        width: 200%
+        height: auto
+        left: 0
+        transition: all .4s ease-in-out
+
+        &:after
+          content: ""
+          display: block
+          clear: both
+
+      .portfolio-container
+        width: 50%
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+
+        .img-unit
+          float: left
+          display: block
+          overflow: hidden
+          position: relative
+          background-size: cover
+          width: 33%
+          padding-top: 20%
+          cursor: pointer
+
+          .img-overlay
+            background-color: fade-out($fade-color, 0.5)
+            position: absolute
+            height: 100%
+            width: 100%
+            top: 0
+            opacity: 0
+            box-sizing: border-box
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            transition: opacity .1s linear
+            
+            .overlay-wrap
+              position: relative
+              
+
+              p
+                color: $text-color-light
+                font:
+                  size: 26px
+                  weight: bold
+                  variant: small-caps
+
+              ul
+                position: absolute
+                right: 0
+                display: block
+                list-style: none
+                text-align: right
+                color: $text-color-light
+                font:
+                  size: 12px
+                  weight: 100
+
+                li
+                  width: 100%
+
+          &:hover .img-overlay
+            opacity: 1
+
+      .spec-container
+        width: 50%
+        display: flex
+        align-items: center
+        justify-content: space-around
+        
+        .img-spec
+          max-width: 50%
+
+        .spec-wrap
+          display: flex
+          flex-direction: column
+          justify-content: center
+          height: 100%
+          width: 40%
+
+          h3
+            text-align: center
+            color: $text-color-dark
+
+          p
+            margin-top: 5%
+            color: $text-color-semidark
+            text-indent: 36px
+            line-height: 1.2
+
+  &.quotes-section
+    background:
+      //image: url(../assets/quotes_bg.png)
+      size: cover
+      position: center top
+
+    .container
+      padding-top: 5%
+      padding-bottom: 5%
+      display: flex
+      justify-content: space-around
+      align-items: center
+
+      .quote
+        width: 25%
+        text-align: center
+
+        .quote-img
+          max-width: 200px
+          clip-path: circle(60px at center)
+
+        .extra-quote-element
+          display: block
+          color: $text-color-accent
+          font:
+            size: 76px
+            family: Arial, sans-serif
+            weight: bold
+        
+        .quote-text
+          margin-top: 5%
+          color: $text-color-dark
+          font: 
+            style: italic
+
+        .quote-author
+          margin-top: 5%
+          color: $text-color-dark
+          font: 
+            style: normal
+            weight: bold
+
+  &.dates-section
+    background-color: $bg-color-semidark
+
+    .container
+      padding-top: 10%
+      padding-bottom: 10%
+      display: flex
+      justify-content: space-around
+      align-items: center
+
+      .date-wrap
+        display: flex
+        flex-direction: column
+        max-width: 40%
+
+        .date-title
+          text-align: center
+
+        .date-text
+          margin-top: 5%
+          text-align: center
+
+
+
+
+  &.feedback-section
+    min-height: 400px
+    background-color: $bg-color-dark
+    position: relative
+    z-index: 10
+
+    .extra-element-bottom
+      position: absolute
+      display: block
+      bottom: 0px
+      transform-origin: bottom left
+
+      &#extra1
+        transform: scale(.3, .1)
+        opacity: .15
+
+      &#extra2
+        transform: scale(.1, .2)
+        opacity: .3
+
+    .extra-element-top
+      position: absolute
+      display: block
+      top: 0px
+      right: 0px
+      transform-origin: top right
+
+      &#extra1
+        transform: scale(.3, .8)
+        opacity: .15
+
+      &#extra2
+        transform: scale(1.1, .3)
+        opacity: .3
+
+    .container
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      h2
+        margin-top: 50px
+        text-align: center
+        color: $text-color-light
+
+      .contact-wrap
+        width: 70%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+        .contacts
+          width: 100%
+
+          .contact-title
+            color: $text-color-lightaccent
+
+          .contact-info
+            list-style: none
+            display: flex
+            margin: 50px auto 50px auto
+            justify-content: space-around
+            color: $text-color-light
+            line-height: 1.5em
+            font-style: italic
+
+            li
+              display: flex
+              align-items: center
+              font-size: 22px
+
+              i
+                font-size: 36px
+                margin: 5px
+
+              ruby
+                text-decoration: underline
+
+                rt
+                  color: $text-color-semidark
+                  text-align: left
+
+        .contact-form
+          width: 100%
+
+          #msgform
+            width: 100%
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+
+            textarea
+              resize: none
+
+            .g-recaptcha
+              margin-top: 20px
+            
+            input, textarea
+              width: 100%
+              display: block
+              border-bottom: solid 2px $text-color-light
+              margin-top: 20px
+              padiing-top: 10px
+              padding-bottom: 10px
+              color: $text-color-semidark
+              font:
+                size: 16px
+                weight: bold
+                style: italic
+
+              &[type="submit"]
+                width: 30%
+                padding: 10px
+                border: none
+                background-color: $bg-color-lightaccent
+                color: $text-color-light
+                font:
+                  size: 16px
+                  weight: bolder
+                  style: normal
+
+footer
+  min-height: 60px
+  background-color: #18191b
+
+  .container
+    display: flex
+    justify-content: space-around
+    align-items: center
+
+    .copyright
+      color: $text-color-light
+
+    .social-wrap
+      width: 15%
+      padding: 4%
+      display: flex
+      justify-content: space-around
+      align-items: center
+
+      a
+        color: $text-color-light
+        font-size: 24px
+
+@media screen and (orientation: portrait)
+  section
+    &.team-section
+      .quote-spacing
+        background-attachment: inherit
+
+    &.services-section 
+      .service-info 
+        .service-wrap 
+          .service 
+            .service-list 
+              li
+                margin: 0
+                width: 100%
+                font-size: 9px

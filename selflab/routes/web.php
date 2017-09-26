@@ -12,5 +12,22 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+})->name('home');
+
+Route::get('/about', function () {
+    return view('about');
 });
+
+Route::get('/services', function () {
+    return view('services');
+});
+
+Route::get('/album', function () {
+    return view('album');
+});
+
+Route::post('/sendemail', [
+    'uses' => 'EmailController@postSendEmail',
+    'as' => 'sendemail'
+]);
