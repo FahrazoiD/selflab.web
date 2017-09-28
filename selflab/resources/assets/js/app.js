@@ -1,9 +1,15 @@
 $(document).ready(function() {
-    portflioSlide();
-    setSpecContent();
-    // parallaxScroller();
+
+    if (window.location.href == "http://localhost:8000/") {
+        portflioSlide();
+        setSpecContent();
+    }
+
     if (window.location.href == "http://localhost:8000/album")
         getInstagramData();
+
+    if (window.location.href == "http://localhost:8000/about")
+        personSlide();
 });
 
 function portflioSlide() {
@@ -71,12 +77,29 @@ function setSpecContent() {
 
     $('.img-unit').click(function() {
         let specTitle = $(this).find('p').text(),
-            specImage = $(this).css('background-image');
+            specImage = './' + $(this).css('background-image').slice($(this).css('background-image').indexOf("images"), -2),
+            specContent = $(this).find('ul').html();
 
-        specImage = './' + specImage.slice(specImage.indexOf("assets"), -2);
+        let startIndex = specImage.indexOf('('),  // Image index calc
+            endIndex = specImage.indexOf(')'),
+            index = specImage.substring(startIndex+1, endIndex);
 
         $('.spec-title').text(specTitle);
         $('.img-spec').attr('src', specImage);
+        $('.spec-content').html(specContent);
+
+        // Adding image onclick image changer
+        $('.img-spec').click(function() {
+            let newSpecImage = specImage.slice(0, startIndex+1) + ++index + specImage.slice(endIndex); 
+             if (!UrlExists(window.location.href + newSpecImage)) {
+                index = 1;
+                newSpecImage = specImage;    
+             }
+
+            $(this).attr('src', newSpecImage);
+
+        });
+
     });
 
 }
@@ -138,6 +161,35 @@ function getInstagramData() {
 
 }
 
+function personSlide() {
+    var state = 1;
+    checkArrows(state);
+
+    $('.right-arrow').click(function() {
+        $('.person-slider').css('left', 'calc(-100% - 160px)');
+        checkArrows(++state);
+    });
+
+    $('.left-arrow').click(function() {
+        $('.person-slider').css('left', '0');
+        checkArrows(--state);
+    });
+
+    function checkArrows(state) {
+        if (state == 1) {
+            $('.left-arrow').hide();
+            $('.right-arrow').show();
+        }
+
+        else {
+            $('.left-arrow').show();
+            $('.right-arrow').hide();
+        }
+           
+    }
+
+}
+
 function initMasonryGrid() {
 
     var grid = document.querySelector('.grid');
@@ -153,4 +205,12 @@ function initMasonryGrid() {
         msnry.layout();
     });
 
+}
+
+function UrlExists(url) // Check for existing image for slider
+{
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    return http.status!=404;
 }

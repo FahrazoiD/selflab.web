@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Geometria";
-  src: url(../fonts/geometria/Geometria-Light.otf);
+  src: url(../fonts/Geometria-Light.otf);
 }
 
 * {
@@ -42,8 +42,43 @@ header {
   position: relative;
 }
 
-header a.main-link {
-  text-shadow: 1px 1px 5px rgba(39, 39, 39, 0.38);
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+}
+
+header nav a.main-link {
+  text-shadow: 1px 1px 2px rgba(39, 39, 39, 0.67);
+  display: block;
+  width: 20%;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #fdfdfd;
+  font-size: 20px;
+  font-weight: bolder;
+  font-variant: small-caps;
+}
+
+header nav a.logo-wrap {
+  max-width: 500px;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+header nav a.logo-wrap .logo {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
 }
 
 header .extra-element {
@@ -70,44 +105,6 @@ header.album-header {
   background-image: url(../images/d_1920-min.jpg);
   background-size: cover;
   background-position: left top;
-}
-
-header.album-header nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 15px;
-}
-
-header.album-header nav a.main-link {
-  display: block;
-  width: 20%;
-  text-align: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  color: #fdfdfd;
-  font-size: 16px;
-  font-weight: bolder;
-  font-variant: small-caps;
-}
-
-header.album-header nav a.logo-wrap {
-  max-width: 500px;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-}
-
-header.album-header nav a.logo-wrap .logo {
-  width: 80%;
-  display: block;
-  margin: 0 auto;
 }
 
 header.album-header .slogan {
@@ -148,44 +145,6 @@ header.services-header {
   background-image: url(../images/c_1920-min.jpg);
   background-size: cover;
   background-position: center top;
-}
-
-header.services-header nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 15px;
-}
-
-header.services-header nav a.main-link {
-  display: block;
-  width: 20%;
-  text-align: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  color: #fdfdfd;
-  font-size: 16px;
-  font-weight: bolder;
-  font-variant: small-caps;
-}
-
-header.services-header nav a.logo-wrap {
-  max-width: 500px;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-}
-
-header.services-header nav a.logo-wrap .logo {
-  width: 80%;
-  display: block;
-  margin: 0 auto;
 }
 
 header.services-header .slogan {
@@ -230,44 +189,6 @@ header.about-header {
   background-position: left top;
 }
 
-header.about-header nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 15px;
-}
-
-header.about-header nav a.main-link {
-  display: block;
-  width: 20%;
-  text-align: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  color: #fdfdfd;
-  font-size: 16px;
-  font-weight: bolder;
-  font-variant: small-caps;
-}
-
-header.about-header nav a.logo-wrap {
-  max-width: 500px;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-}
-
-header.about-header nav a.logo-wrap .logo {
-  width: 80%;
-  display: block;
-  margin: 0 auto;
-}
-
 header.about-header .slogan {
   padding-top: 10%;
   max-width: 50%;
@@ -306,48 +227,9 @@ header.about-header .slogan span {
 
 header.main-header {
   height: 100vh;
-  min-height: 940px;
   background-image: url(../images/home_1920-min.jpg);
   background-size: cover;
-  background-position: center top;
-}
-
-header.main-header nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 15px;
-}
-
-header.main-header nav a.main-link {
-  display: block;
-  width: 20%;
-  text-align: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  color: #fdfdfd;
-  font-size: 16px;
-  font-weight: bolder;
-  font-variant: small-caps;
-}
-
-header.main-header nav a.logo-wrap {
-  max-width: 500px;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-}
-
-header.main-header nav a.logo-wrap .logo {
-  width: 80%;
-  display: block;
-  margin: 0 auto;
+  background-position: center;
 }
 
 header.main-header .slogan {
@@ -640,6 +522,40 @@ section.team-section .container {
   overflow-x: hidden;
   padding: 20px 150px 40px 150px;
   z-index: 10;
+  position: relative;
+}
+
+section.team-section .container .left-arrow {
+  position: absolute;
+  width: 20px;
+  left: 0;
+  top: 50%;
+  z-index: 15;
+}
+
+section.team-section .container .right-arrow {
+  position: absolute;
+  width: 20px;
+  right: 0;
+  top: 50%;
+  z-index: 15;
+}
+
+section.team-section .person-slider {
+  width: calc(200% + 160px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  height: auto;
+  left: 0;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+section.team-section .extra-spacer {
+  width: 160px;
+  height: 100%;
 }
 
 section.team-section .person {
@@ -1003,8 +919,24 @@ section.portfolio-section .container .spec-container {
       justify-content: space-around;
 }
 
-section.portfolio-section .container .spec-container .img-spec {
-  max-width: 50%;
+section.portfolio-section .container .spec-container a.back-arrow img {
+  width: 20px;
+  cursor: pointer;
+}
+
+section.portfolio-section .container .spec-container .img-wrapper .img-spec {
+  max-height: 390px;
+  position: relative;
+  cursor: pointer;
+}
+
+section.portfolio-section .container .spec-container .img-wrapper::before {
+  content: "";
+  display: block;
+  right: 0;
+  bottom: 0;
+  width: 10%;
+  background-image: url(../images/pointer.png);
 }
 
 section.portfolio-section .container .spec-container .spec-wrap {
@@ -1019,19 +951,36 @@ section.portfolio-section .container .spec-container .spec-wrap {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
-  width: 40%;
+  width: 35%;
 }
 
-section.portfolio-section .container .spec-container .spec-wrap h3 {
-  text-align: center;
+section.portfolio-section .container .spec-container .spec-wrap .spec-title {
+  font-size: 46px;
+  text-align: left;
   color: #4f4f4f;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px;
 }
 
-section.portfolio-section .container .spec-container .spec-wrap p {
-  margin-top: 5%;
+section.portfolio-section .container .spec-container .spec-wrap hr {
+  border: 1px solid #e8e8e8;
+  margin-top: 30px;
+}
+
+section.portfolio-section .container .spec-container .spec-wrap .spec-content {
+  margin-top: 30px;
   color: #929292;
-  text-indent: 36px;
-  line-height: 1.2;
+  list-style: none;
+  text-align: left;
+  font-style: italic;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px;
+}
+
+section.portfolio-section .container .spec-container .spec-wrap .spec-content li {
+  margin-top: 5px;
 }
 
 section.quotes-section {
@@ -1282,7 +1231,6 @@ section.feedback-section .container .contact-wrap .contact-form #msgform input, 
   display: block;
   border-bottom: solid 2px #fdfdfd;
   margin-top: 20px;
-  padiing-top: 10px;
   padding-bottom: 10px;
   color: #929292;
   font-size: 16px;
@@ -1347,5 +1295,9 @@ footer .container .social-wrap a {
     margin: 0;
     width: 100%;
     font-size: 9px;
+  }
+  header nav a.main-link {
+    text-shadow: 1px 1px 24px rgba(39, 39, 39, 0.67);
+    font-size: 38px;
   }
 }

@@ -60,35 +60,31 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 40:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 8:
+/******/ ([
+/* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(9);
-module.exports = __webpack_require__(40);
+__webpack_require__(1);
+module.exports = __webpack_require__(2);
 
 
 /***/ }),
-
-/***/ 9:
+/* 1 */
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
-    portflioSlide();
-    setSpecContent();
-    // parallaxScroller();
+
+    if (window.location.href == "http://localhost:8000/") {
+        portflioSlide();
+        setSpecContent();
+    }
+
     if (window.location.href == "http://localhost:8000/album") getInstagramData();
+
+    if (window.location.href == "http://localhost:8000/about") personSlide();
 });
 
 function portflioSlide() {
@@ -105,7 +101,7 @@ function portflioSlide() {
 function portfolioResize() {
 
     $('.insta-img').click(function () {
-        var modal = '<div class="modal_blackener" \n                              style="z-index: 50; \n                                    top: 0; left: 0; \n                                    position: fixed; \n                                    width: 100vw; \n                                    height: 100vh; \n                                    background-color: rgba(50, 50, 50, .5); \n                                    display: flex; \n                                    flex-direction: column;\n                                    justify-content: center;\n                                    align-items: center;"> \n\t\t\t\t\t\t\t<div class=\'modal_img\'\n                                style=\'z-index: 60;\n                                        height: auto; \n                                        border: 10px solid white;\n                                        box-shadow: 0px 0px 4px rgba(50, 50, 50, .6);\n\t\t\t\t\t\t\t\t\t\tcursor: pointer;\n\t\t\t\t\t\t\t\t\t\tposition: relative;\'>\n\t\t\t\t\t\t\t\t<img src="../images/close.svg" width=\'50px\' style="position: absolute; right: 0; top 0;"></img>\n                            </div>\n                          </div>';
+        var modal = "<div class=\"modal_blackener\" \n                              style=\"z-index: 50; \n                                    top: 0; left: 0; \n                                    position: fixed; \n                                    width: 100vw; \n                                    height: 100vh; \n                                    background-color: rgba(50, 50, 50, .5); \n                                    display: flex; \n                                    flex-direction: column;\n                                    justify-content: center;\n                                    align-items: center;\"> \n\t\t\t\t\t\t\t<div class='modal_img'\n                                style='z-index: 60;\n                                        height: auto; \n                                        border: 10px solid white;\n                                        box-shadow: 0px 0px 4px rgba(50, 50, 50, .6);\n\t\t\t\t\t\t\t\t\t\tcursor: pointer;\n\t\t\t\t\t\t\t\t\t\tposition: relative;'>\n\t\t\t\t\t\t\t\t<img src=\"../images/close.svg\" width='50px' style=\"position: absolute; right: 0; top 0;\"></img>\n                            </div>\n                          </div>";
         var imgsrc_old = $(this).attr('src');
         var imgsrc_new = '';
 
@@ -115,12 +111,12 @@ function portfolioResize() {
         if (imgsrc_old.indexOf('/p320x320/') == -1) {
             imgsrc_new = imgsrc_old.replace('/s320x320/', '/612x612/');
             $('.modal_img').css('width', '70%');
-            $('.modal_img').append('<img src=\'' + imgsrc_new + '\' width=100%></img>');
+            $('.modal_img').append("<img src='" + imgsrc_new + "' width=100%></img>");
         } else {
             imgsrc_new = imgsrc_old.replace('/p320x320/', '/612x612/');
 
             $(window).height() > $(window).width() ? $('.modal_img').css('height', '60%') : $('.modal_img').css('height', '80%');
-            $('.modal_img').append('<img src=\'' + imgsrc_new + '\' height=100%></img>');
+            $('.modal_img').append("<img src='" + imgsrc_new + "' height=100%></img>");
         }
 
         $('.modal_img').click(function () {
@@ -134,12 +130,28 @@ function setSpecContent() {
 
     $('.img-unit').click(function () {
         var specTitle = $(this).find('p').text(),
-            specImage = $(this).css('background-image');
+            specImage = './' + $(this).css('background-image').slice($(this).css('background-image').indexOf("images"), -2),
+            specContent = $(this).find('ul').html();
 
-        specImage = './' + specImage.slice(specImage.indexOf("assets"), -2);
+        var startIndex = specImage.indexOf('('),
+            // Image index calc
+        endIndex = specImage.indexOf(')'),
+            index = specImage.substring(startIndex + 1, endIndex);
 
         $('.spec-title').text(specTitle);
         $('.img-spec').attr('src', specImage);
+        $('.spec-content').html(specContent);
+
+        // Adding image onclick image changer
+        $('.img-spec').click(function () {
+            var newSpecImage = specImage.slice(0, startIndex + 1) + ++index + specImage.slice(endIndex);
+            if (!UrlExists(window.location.href + newSpecImage)) {
+                index = 1;
+                newSpecImage = specImage;
+            }
+
+            $(this).attr('src', newSpecImage);
+        });
     });
 }
 
@@ -193,6 +205,31 @@ function getInstagramData() {
     feed.run();
 }
 
+function personSlide() {
+    var state = 1;
+    checkArrows(state);
+
+    $('.right-arrow').click(function () {
+        $('.person-slider').css('left', 'calc(-100% - 160px)');
+        checkArrows(++state);
+    });
+
+    $('.left-arrow').click(function () {
+        $('.person-slider').css('left', '0');
+        checkArrows(--state);
+    });
+
+    function checkArrows(state) {
+        if (state == 1) {
+            $('.left-arrow').hide();
+            $('.right-arrow').show();
+        } else {
+            $('.left-arrow').show();
+            $('.right-arrow').hide();
+        }
+    }
+}
+
 function initMasonryGrid() {
 
     var grid = document.querySelector('.grid');
@@ -209,6 +246,19 @@ function initMasonryGrid() {
     });
 }
 
-/***/ })
+function UrlExists(url) // Check for existing image for slider
+{
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    return http.status != 404;
+}
 
-/******/ });
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ })
+/******/ ]);

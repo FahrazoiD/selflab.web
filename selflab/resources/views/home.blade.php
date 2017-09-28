@@ -38,7 +38,7 @@
     <div class="portfolio-slide">
       <div class="portfolio-container">
 
-        <a class="img-unit" style="background-image: url('./images/portfolio-img(1)-min.jpg')">
+        <a class="img-unit" style="background-image: url('./images/bns/bns-img(1)-min.jpg')">
           <div class="img-overlay">
             <div class="overlay-wrap">
               <p>Съемка для Вашего бизнеса</p>
@@ -52,7 +52,7 @@
           </div>
         </a> 
 
-        <a class="img-unit" style="background-image: url('./images/portfolio-img(2)-min.jpg')">
+        <a class="img-unit" style="background-image: url('./images/idv/idv-img(1)-min.jpg')">
           <div class="img-overlay">
             <div class="overlay-wrap">
               <p>Индивидуальная съемка</p>
@@ -65,7 +65,7 @@
           </div>
         </a> 
 
-        <a class="img-unit" style="background-image: url('./images/portfolio-img(3)-min.jpg')">
+        <a class="img-unit" style="background-image: url('./images/wng/wng-img(1)-min.jpg')">
           <div class="img-overlay">
             <div class="overlay-wrap">
               <p>Свадебная съемка</p>
@@ -78,7 +78,7 @@
           </div>
         </a> 
 
-        <a class="img-unit" style="background-image: url('./images/portfolio-img(4)-min.jpg')">
+        <a class="img-unit" style="background-image: url('./images/rpg/rpg-img(1)-min.jpg')">
           <div class="img-overlay">
             <div class="overlay-wrap">
               <p>Репортажная съемка</p>
@@ -92,7 +92,7 @@
           </div>
         </a> 
 
-        <a class="img-unit" style="background-image: url('./images/portfolio-img(5)-min.jpg')">
+        <a class="img-unit" style="background-image: url('./images/pds/pds-img(1)-min.jpg')">
           <div class="img-overlay">
             <div class="overlay-wrap">
               <p>Тематические фотодни
@@ -107,7 +107,7 @@
           </div>
         </a> 
 
-        <a class="img-unit" style="background-image: url('./images/portfolio-img(6)-min.jpg')">
+        <a class="img-unit" style="background-image: url('./images/srm/srm-img(1)-min.jpg')">
           <div class="img-overlay">
             <div class="overlay-wrap">
               <p>Промо-съемка для Шоу-румов
@@ -121,6 +121,22 @@
         </a> 
 
       </div>
+
+      <div class="spec-container">
+        <a class="back-arrow">
+          <img src="./images/arrow-left.svg">
+        </a>
+        <div class="img-wrapper">
+          <img class="img-spec" alt="Это основное фото выбранного типа съемки">
+        </div>
+        <div class="spec-wrap">
+          <h3 class="spec-title">Здесь будет указан тип съемки</h3>
+          <hr>
+          <ul class="spec-content">
+            Здесь будет список услуг для заданного типа съемки
+          </ul>
+        </div>
+      </div> 
     </div>
   </div>
 </section>
