@@ -554,8 +554,7 @@ section.team-section .person-slider {
 }
 
 section.team-section .extra-spacer {
-  width: 160px;
-  height: 100%;
+  min-width: 160px;
 }
 
 section.team-section .person {

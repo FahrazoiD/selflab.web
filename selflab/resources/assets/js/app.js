@@ -163,10 +163,11 @@ function getInstagramData() {
 
 function personSlide() {
     var state = 1;
+    var extraSpacer = $('.extra-spacer').css('width');
     checkArrows(state);
 
     $('.right-arrow').click(function() {
-        $('.person-slider').css('left', 'calc(-100% - 160px)');
+        $('.person-slider').css('left', 'calc(-100% - ' + extraSpacer + ' )');
         checkArrows(++state);
     });
 
