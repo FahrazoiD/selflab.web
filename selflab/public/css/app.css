@@ -528,7 +528,7 @@ section.team-section .container {
 section.team-section .container .left-arrow {
   position: absolute;
   width: 20px;
-  left: 0;
+  left: 20px;
   top: 50%;
   z-index: 15;
 }
@@ -536,7 +536,7 @@ section.team-section .container .left-arrow {
 section.team-section .container .right-arrow {
   position: absolute;
   width: 20px;
-  right: 0;
+  right: 20px;
   top: 50%;
   z-index: 15;
 }
