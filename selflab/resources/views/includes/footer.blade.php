@@ -11,6 +11,9 @@
       <a href="https://www.facebook.com/selflaboratory">
         <i class="fa fa-facebook"></i>
       </a>
+      <a href="https://www.youtube.com/channel/UCd33pyn91hogjzCONnES8KQ">
+        <i class="fa fa-youtube"></i>
+      </a>
     </div>
   </div>
 </footer>

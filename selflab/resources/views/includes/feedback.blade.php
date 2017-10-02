@@ -1,8 +1,5 @@
 <section class="feedback-section">
-  <img class="extra-element-bottom" id="extra1" src="./images/extra-element1.svg">
-  <img class="extra-element-bottom" id="extra2" src="./images/extra-element2.svg">
-  <img class="extra-element-top" id="extra1" src="./images/extra-element4.svg">
-  <img class="extra-element-top" id="extra2" src="./images/extra-element3.svg">
+  <img class="extra-element-bottom" src="./images/extra-element.2.svg">
   <div class="container">
     <div class="contact-wrap">
       <h2 class="footer-title">

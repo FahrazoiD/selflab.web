@@ -206,27 +206,38 @@ function getInstagramData() {
 }
 
 function personSlide() {
-    var state = 1;
+    var state = 0;
     var extraSpacer = $('.extra-spacer').css('width');
+    console.log(extraSpacer);
     checkArrows(state);
 
     $('.right-arrow').click(function () {
-        $('.person-slider').css('left', 'calc(-100% - ' + extraSpacer + ' )');
-        checkArrows(++state);
+        state++;
+        $('.person-slider').css('left', 'calc(-' + state + '00% - ' + state + '*' + extraSpacer + ')');
+        checkArrows(state);
     });
 
     $('.left-arrow').click(function () {
-        $('.person-slider').css('left', '0');
-        checkArrows(--state);
+        state--;
+        if (state) {
+            $('.person-slider').css('left', 'calc(-' + state + '00% - ' + state + '*' + extraSpacer + ')');
+        } else {
+            $('.person-slider').css('left', '0px');
+        }
+        checkArrows(state);
     });
 
     function checkArrows(state) {
-        if (state == 1) {
+        console.log($('.person-slider').css('left'));
+        if (state == 0) {
             $('.left-arrow').hide();
             $('.right-arrow').show();
-        } else {
+        } else if (state == 2) {
             $('.left-arrow').show();
             $('.right-arrow').hide();
+        } else {
+            $('.left-arrow').show();
+            $('.right-arrow').show();
         }
     }
 }

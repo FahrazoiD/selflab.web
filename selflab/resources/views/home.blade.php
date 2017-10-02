@@ -6,8 +6,7 @@
 
 @section('header')
   <header class="main-header">
-    <img class="extra-element" id="extra1" src="./images/extra-element1.svg">
-    <img class="extra-element" id="extra2" src="./images/extra-element2.svg">
+    <img class="extra-element" src="./images/extra-element.svg">
     <div class="container">
       <nav>
         <a class="main-link" href="/">Главная</a>

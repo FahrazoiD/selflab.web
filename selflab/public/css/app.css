@@ -87,17 +87,8 @@ header .extra-element {
   bottom: 0px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-}
-
-header .extra-element#extra1 {
-  -webkit-transform: scale(1, 0.15);
-          transform: scale(1, 0.15);
-}
-
-header .extra-element#extra2 {
-  -webkit-transform: scale(0.3, 0.3);
-          transform: scale(0.3, 0.3);
-  bottom: -6px;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 header.album-header {
@@ -227,6 +218,7 @@ header.about-header .slogan span {
 
 header.main-header {
   height: 100vh;
+  overflow-x: hidden;
   background-image: url(../images/home_1920-min.jpg);
   background-size: cover;
   background-position: center;
@@ -542,7 +534,7 @@ section.team-section .container .right-arrow {
 }
 
 section.team-section .person-slider {
-  width: calc(200% + 160px);
+  width: calc(300% + 320px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -551,6 +543,10 @@ section.team-section .person-slider {
   left: 0;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
+}
+
+section.team-section .person-slider > .person-info {
+  width: 33.3%;
 }
 
 section.team-section .extra-spacer {
@@ -1079,21 +1075,12 @@ section.feedback-section {
 section.feedback-section .extra-element-bottom {
   position: absolute;
   display: block;
-  bottom: 0px;
+  bottom: -50px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-}
-
-section.feedback-section .extra-element-bottom#extra1 {
-  -webkit-transform: scale(0.3, 0.1);
-          transform: scale(0.3, 0.1);
-  opacity: .15;
-}
-
-section.feedback-section .extra-element-bottom#extra2 {
-  -webkit-transform: scale(0.1, 0.2);
-          transform: scale(0.1, 0.2);
-  opacity: .3;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  opacity: .2;
 }
 
 section.feedback-section .extra-element-top {
@@ -1103,18 +1090,9 @@ section.feedback-section .extra-element-top {
   right: 0px;
   -webkit-transform-origin: top right;
           transform-origin: top right;
-}
-
-section.feedback-section .extra-element-top#extra1 {
-  -webkit-transform: scale(0.3, 0.8);
-          transform: scale(0.3, 0.8);
-  opacity: .15;
-}
-
-section.feedback-section .extra-element-top#extra2 {
-  -webkit-transform: scale(1.1, 0.3);
-          transform: scale(1.1, 0.3);
-  opacity: .3;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  opacity: .2;
 }
 
 section.feedback-section .container {
@@ -1251,6 +1229,8 @@ section.feedback-section .container .contact-wrap .contact-form #msgform input[t
 footer {
   min-height: 60px;
   background-color: #18191b;
+  position: relative;
+  z-index: 20;
 }
 
 footer .container {
@@ -1298,5 +1278,9 @@ footer .container .social-wrap a {
   header nav a.main-link {
     text-shadow: 1px 1px 24px rgba(39, 39, 39, 0.67);
     font-size: 38px;
+  }
+  header .extra-element {
+    -webkit-transform: scale(1.9);
+            transform: scale(1.9);
   }
 }
