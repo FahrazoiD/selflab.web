@@ -418,7 +418,7 @@ section.services-section .service-info .service-wrap .service .service-name {
 
 section.services-section .service-info .service-wrap .service .price {
   text-align: center;
-  font-size: 1.8em;
+  font-size: 28px;
   color: #ED4009;
 }
 
@@ -431,11 +431,11 @@ section.services-section .service-info .service-wrap .service .service-list li {
   text-align: center;
   color: #929292;
   width: 90%;
-  font-size: .9em;
+  font-size: 14px;
 }
 
 section.services-section .service-info .service-wrap .service .service-list li:first-child {
-  font-size: 1.2em;
+  font-size: 18px;
   color: #4f4f4f;
   width: 100%;
 }
@@ -446,13 +446,13 @@ section.services-section .service-info .service-extra {
 }
 
 section.services-section .service-info .service-extra p {
-  font-size: 1.2em;
+  font-size: 18px;
   color: #4f4f4f;
 }
 
 section.services-section .service-info .service-extra ul {
   margin-top: 30px;
-  font-size: .8em;
+  font-size: 12px;
   color: #929292;
   list-style: none;
   font-style: italic;
@@ -463,7 +463,7 @@ section.services-section .service-special {
   padding-bottom: 80px;
 }
 
-section.services-section .service-special .etc, section.services-section .service-special .edu {
+section.services-section .service-special .etc, section.services-section .service-special .edu, section.services-section .service-special .sert {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -476,38 +476,42 @@ section.services-section .service-special .etc, section.services-section .servic
           align-items: center;
 }
 
-section.services-section .service-special .etc .spec-icon, section.services-section .service-special .edu .spec-icon {
+section.services-section .service-special .etc .spec-icon, section.services-section .service-special .edu .spec-icon, section.services-section .service-special .sert .spec-icon {
   opacity: .6;
 }
 
-section.services-section .service-special .etc .info, section.services-section .service-special .edu .info {
+section.services-section .service-special .etc .info, section.services-section .service-special .edu .info, section.services-section .service-special .sert .info {
   margin-left: 30px;
   width: 70%;
 }
 
-section.services-section .service-special .etc .info h2, section.services-section .service-special .edu .info h2 {
+section.services-section .service-special .etc .info h2, section.services-section .service-special .edu .info h2, section.services-section .service-special .sert .info h2 {
   color: #4f4f4f;
   display: inline-block;
 }
 
-section.services-section .service-special .etc .info h2::after, section.services-section .service-special .edu .info h2::after {
+section.services-section .service-special .etc .info h2::after, section.services-section .service-special .edu .info h2::after, section.services-section .service-special .sert .info h2::after {
   content: "";
   display: block;
-  width: 100px;
+  width: 100%;
   left: 50%;
   height: 2px;
   background-color: #F3CFBD;
-  margin: 10px auto;
+  margin: 10px 0px 10px 0px;
 }
 
-section.services-section .service-special .etc .info ul, section.services-section .service-special .edu .info ul {
+section.services-section .service-special .etc .info ul, section.services-section .service-special .edu .info ul, section.services-section .service-special .sert .info ul {
   list-style: none;
   color: #929292;
-  font-size: .9em;
+  font-size: 16px;
 }
 
-section.services-section .service-special .etc .info ul li, section.services-section .service-special .edu .info ul li {
+section.services-section .service-special .etc .info ul li, section.services-section .service-special .edu .info ul li, section.services-section .service-special .sert .info ul li {
   margin-top: 5px;
+}
+
+section.services-section .service-special .etc .info ul li.ps, section.services-section .service-special .edu .info ul li.ps, section.services-section .service-special .sert .info ul li.ps {
+  font-size: 12px;
 }
 
 section.team-section .container {

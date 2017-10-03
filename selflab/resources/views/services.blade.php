@@ -140,6 +140,21 @@
           </ul>
         </div>
       </div>
+      <div class="sert">
+        <img src="./images/sert.svg" alt="Sertificates icon" class="spec-icon">
+        <div class="info">
+          <h2>
+            Подарочный сертификат
+          </h2>
+          <ul>
+            <li>Обучающий урок или мастер-класс, посвященный фотографии/созданию образа</li>
+            <li>Cъемка от команды SelfLab</li>
+            <li>Образ от стилиста</li>
+            <li>Наряд от нашего дизайнера</li>
+            <li class="ps">* Все детали и возможные варианты обсуждаются с организатором</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </section>
