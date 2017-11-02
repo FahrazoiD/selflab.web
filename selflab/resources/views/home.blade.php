@@ -58,6 +58,7 @@
               <ul>
                 <li>Съемка для одного человека</li>
                 <li>Семейная съемка</li>
+                <li>Детская съемка</li>
                 <li>Love-story</li>
               </ul>
             </div>
@@ -109,10 +110,11 @@
         <a class="img-unit" style="background-image: url('./images/srm/srm-img(1)-min.jpg')">
           <div class="img-overlay">
             <div class="overlay-wrap">
-              <p>Промо-съемка для Шоу-румов
+              <p>Промо-съемка
                 <ul>
-                  <li>Студийная съемка</li>
-                  <li>Выездная съемка</li>
+                  <li>Для шоу-румов</li>
+                  <li>(студийная и выездная)</li>                  
+                  <li>Предметная съемка</li>                  
                 </ul>
               </p>
             </div>

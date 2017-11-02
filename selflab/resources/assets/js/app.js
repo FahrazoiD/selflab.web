@@ -24,6 +24,10 @@ function portflioSlide() {
 
 }
 
+function slickSlider() {
+    console.log('lol');
+}
+
 function portfolioResize() {
 
     $('.insta-img').click(function() {
@@ -82,7 +86,7 @@ function setSpecContent() {
 
         let startIndex = specImage.indexOf('('),  // Image index calc
             endIndex = specImage.indexOf(')'),
-            index = specImage.substring(startIndex+1, endIndex);
+            index = +specImage.substring(startIndex+1, endIndex);
 
         $('.spec-title').text(specTitle);
         $('.img-spec').attr('src', specImage);
@@ -90,18 +94,11 @@ function setSpecContent() {
 
         // Adding image onclick image changer
         $('.img-spec').click(function() {
-            let newSpecImage = specImage.slice(0, startIndex+1) + ++index + specImage.slice(endIndex); 
-             if (!UrlExists(window.location.href + newSpecImage)) {
-                index = 1;
-                newSpecImage = specImage;    
-             }
-
+            index = index === 8 ? 1 : index+1;
+            let newSpecImage = specImage.slice(0, startIndex+1) + index + specImage.slice(endIndex);
             $(this).attr('src', newSpecImage);
-
         });
-
     });
-
 }
 
 function parallaxScroller() {
@@ -164,7 +161,6 @@ function getInstagramData() {
 function personSlide() {
     var state = 0;
     var extraSpacer = $('.extra-spacer').css('width');
-    console.log(extraSpacer);
     checkArrows(state);
 
     $('.right-arrow').click(function() {
@@ -184,20 +180,17 @@ function personSlide() {
     });
 
     function checkArrows(state) {
-        console.log($('.person-slider').css('left'));
         if (state == 0) {
             $('.left-arrow').hide();
             $('.right-arrow').show();
-        } else if (state == 2) {
+        } else if (state == 1) {
             $('.left-arrow').show();
             $('.right-arrow').hide();
         } else {
             $('.left-arrow').show();
             $('.right-arrow').show();
         }
-           
     }
-
 }
 
 function initMasonryGrid() {
@@ -215,12 +208,4 @@ function initMasonryGrid() {
         msnry.layout();
     });
 
-}
-
-function UrlExists(url) // Check for existing image for slider
-{
-    var http = new XMLHttpRequest();
-    http.open('HEAD', url, false);
-    http.send();
-    return http.status!=404;
 }

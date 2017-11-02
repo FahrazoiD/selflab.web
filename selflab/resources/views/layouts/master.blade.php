@@ -7,9 +7,12 @@
       
       <link rel="stylesheet" href="./css/font-awesome.min.css">
       <link rel="stylesheet" href="./css/app.css">
+      <link rel="stylesheet" href="./css/slick.css">
+      <!-- <link rel="stylesheet" href="./css/slick-theme.css">       -->
 
       {{-- ReCaptcha --}}
-      <script src='https://www.google.com/recaptcha/api.js'></script>
+      <script src='https://www.google.com/recaptcha/api.js'>
+      </script>
 
       <title>@yield('title')</title>
   </head>
@@ -42,6 +45,7 @@
     <script src="./js/instafeed.min.js"></script>
     <script src="./js/masonry.pkgd.min.js"></script>
     <script src="./js/imagesloaded.pkgd.min.js"></script>
+    <script src="./js/slick.min.js"></script>    
     <script src="./js/app.js"></script>
   </body>
 </html>

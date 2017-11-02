@@ -27,7 +27,6 @@ input:focus, textarea:focus {
 
 body {
   min-width: 1170px;
-  overflow-x: hidden;
 }
 
 .container {
@@ -194,7 +193,7 @@ header.about-header .slogan {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  text-shadow: 1px 1px 2px rgba(39, 39, 39, 0.67);
+  text-shadow: 1px 1px 2px rgba(39, 39, 39, 0.97);
 }
 
 header.about-header .slogan h1 {
@@ -212,7 +211,7 @@ header.about-header .slogan span {
       align-self: flex-end;
   text-align: right;
   letter-spacing: .05em;
-  font-size: 18px;
+  font-size: 20px;
   font-variant: small-caps;
 }
 
@@ -527,6 +526,7 @@ section.team-section .container .left-arrow {
   left: 20px;
   top: 50%;
   z-index: 15;
+  cursor: pointer;
 }
 
 section.team-section .container .right-arrow {
@@ -535,10 +535,11 @@ section.team-section .container .right-arrow {
   right: 20px;
   top: 50%;
   z-index: 15;
+  cursor: pointer;
 }
 
 section.team-section .person-slider {
-  width: calc(300% + 320px);
+  width: calc(200% + 160px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -550,7 +551,7 @@ section.team-section .person-slider {
 }
 
 section.team-section .person-slider > .person-info {
-  width: 33.3%;
+  width: 50%;
 }
 
 section.team-section .extra-spacer {
@@ -582,16 +583,6 @@ section.team-section .person::before {
   height: 100%;
   z-index: 5;
   background-color: #f8f8f8;
-}
-
-section.team-section .person::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 85%;
-  height: 100%;
-  z-index: 4;
-  background-color: #BEBEBE;
 }
 
 section.team-section .person-left::before {
@@ -1231,7 +1222,6 @@ section.feedback-section .container .contact-wrap .contact-form #msgform input[t
 }
 
 footer {
-  min-height: 60px;
   background-color: #18191b;
   position: relative;
   z-index: 20;
@@ -1241,6 +1231,7 @@ footer .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 90px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;

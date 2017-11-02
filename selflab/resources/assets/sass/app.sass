@@ -6,7 +6,7 @@
 
 body
   min-width: 1170px
-  overflow-x: hidden 
+  // overflow-x: hidden 
 
 .container
   margin: 0 auto
@@ -133,7 +133,7 @@ header
       display: flex
       flex-direction: column
       justify-content: space-around
-      text-shadow: 1px 1px 2px rgba(39, 39, 39, 0.67)
+      text-shadow: 1px 1px 2px rgba(39, 39, 39, 0.97)
       
       h1
         text-transform: uppercase
@@ -149,7 +149,7 @@ header
         text-align: right
         letter-spacing: .05em
         font:
-          size: 18px
+          size: 20px
           variant: small-caps
 
 
@@ -428,6 +428,7 @@ section
         left: 20px
         top: 50%
         z-index: 15
+        cursor: pointer
 
       .right-arrow
         position: absolute
@@ -435,9 +436,10 @@ section
         right: 20px
         top: 50%
         z-index: 15
+        cursor: pointer
 
     .person-slider
-      width: calc(300% + 320px)
+      width: calc(200% + 160px)
       display: flex
       position: relative
       height: auto
@@ -445,7 +447,7 @@ section
       transition: all .4s ease-in-out
 
       &>.person-info
-        width: 33.3%
+        width: 50%
 
     .extra-spacer
       min-width: 160px
@@ -467,14 +469,14 @@ section
         z-index: 5
         background-color: $bg-color-light
 
-      &::after
-        content: ""
-        display: block
-        position: absolute
-        width: 85%
-        height: 100%
-        z-index: 4
-        background-color: $bg-color-semilight
+      // &::after
+      //   content: ""
+      //   display: block
+      //   position: absolute
+      //   width: 85%
+      //   height: 100%
+      //   z-index: 4
+      //   background-color: $bg-color-semilight
 
       &-left
         &::before
@@ -943,13 +945,13 @@ section
                   style: normal
 
 footer
-  min-height: 60px
   background-color: #18191b
   position: relative
   z-index: 20
 
   .container
     display: flex
+    height: 90px
     justify-content: space-around
     align-items: center
 

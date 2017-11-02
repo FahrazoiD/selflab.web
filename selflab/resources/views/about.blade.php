@@ -99,25 +99,6 @@
         </a>
         <div class="person-slider">
           <div class="person-info person-info-right">
-            <div class="person-img" style="background-image: url(./images/person3-min.png)"></div>
-            <div class="person-text">
-              <h2 class="person-name">
-                Савина Нино
-              </h2>
-              <h3 class="person-status">
-                Стилист-визажист
-              </h3>
-              <p class="person-quote">
-                Сейчас, пожалуй, сложно себе представить даже самый простой фотопроект без участия стилиста-визажиста. Для меня фотопроекты Self Lab всегда вызов и отличная возможность быть членом команды. Здесь я могу реализоваться не только как свадебный стилист, но и создавать креативные, fashion и вечерние образы. Проекты Self Laboratory обладают неповторимым стилем, и это мне нравится. 
-              </p>
-              <br>
-              <p class="person-quote">
-                При слаженной разработке проектов всеми участниками нашей команды всегда получается отличный результат!
-              </p>
-            </div>
-          </div>
-          <div class="extra-spacer"></div>
-          <div class="person-info person-info-right">
             <div class="person-img" style="background-image: url(./images/person4.png)"></div>
             <div class="person-text">
               <h2 class="person-name">
@@ -133,7 +114,7 @@
           </div>
           <div class="extra-spacer"></div>
           <div class="person-info person-info-right">
-            <div class="person-img"></div>
+            <div class="person-img" style="background-image: url(./images/person5.png)"></div>
             <div class="person-text">
               <h2 class="person-name">
                 Кристина Позднякова
