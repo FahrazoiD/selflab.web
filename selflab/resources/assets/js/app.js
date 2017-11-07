@@ -2,30 +2,58 @@ $(document).ready(function() {
 
     if (window.location.href == "http://localhost:8000/") {
         portflioSlide();
-        setSpecContent();
     }
 
-    if (window.location.href == "http://localhost:8000/album")
+    if (window.location.href == "http://localhost:8000/album") {
         getInstagramData();
+    }
 
-    if (window.location.href == "http://localhost:8000/about")
+    if (window.location.href == "http://localhost:8000/about") {
         personSlide();
+    }
 });
 
 function portflioSlide() {
 
     $('.img-unit').click(function() {
-        $('.portfolio-slide').css('left', '-100%');
+        let specTitle = $(this).find('p').text(),
+        specContent = $(this).find('ul').html(),
+        imageCss = $(this).css('background-image'),
+        specImageRoot = './' + imageCss.slice(imageCss.indexOf("images"), imageCss.lastIndexOf("(") + 1);
+
+        $('.spec-title').text(specTitle);
+        $('.spec-content').html(specContent);
+        $('.slick_carousel img').each( function(index) {
+            $(this).attr('src', specImageRoot + (index+1) + ')-min.jpg');
+        });
+
+        $('.slick_carousel').imagesLoaded().always( () => {
+            $('.portfolio-slide').css('left', '-100%');
+        });
+
+        slickCarousel();
     });
 
     $('.back-arrow').click(function() {
         $('.portfolio-slide').css('left', '0');
+        $('.slick_carousel').slick('unslick').hide();
     });
 
 }
 
-function slickSlider() {
-    console.log('lol');
+function slickCarousel() {
+    const slickCarousel = $('.slick_carousel').show();
+
+    slickCarousel.slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 1,
+        variableWidth: true,
+        arrows: false,
+        centerMode: true
+    });
+
 }
 
 function portfolioResize() {
@@ -75,30 +103,6 @@ function portfolioResize() {
         })
     });
 
-}
-
-function setSpecContent() {
-
-    $('.img-unit').click(function() {
-        let specTitle = $(this).find('p').text(),
-            specImage = './' + $(this).css('background-image').slice($(this).css('background-image').indexOf("images"), -2),
-            specContent = $(this).find('ul').html();
-
-        let startIndex = specImage.indexOf('('),  // Image index calc
-            endIndex = specImage.indexOf(')'),
-            index = +specImage.substring(startIndex+1, endIndex);
-
-        $('.spec-title').text(specTitle);
-        $('.img-spec').attr('src', specImage);
-        $('.spec-content').html(specContent);
-
-        // Adding image onclick image changer
-        $('.img-spec').click(function() {
-            index = index === 8 ? 1 : index+1;
-            let newSpecImage = specImage.slice(0, startIndex+1) + index + specImage.slice(endIndex);
-            $(this).attr('src', newSpecImage);
-        });
-    });
 }
 
 function parallaxScroller() {

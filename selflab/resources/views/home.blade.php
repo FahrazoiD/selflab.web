@@ -32,7 +32,7 @@
       Что мы предлагаем?
     </h2>
     <p class="section-quote">
-      Останови время - запечатли свой стиль
+      Съемки любого формата и масштаба
     </p>
     <div class="portfolio-slide">
       <div class="portfolio-container">
@@ -57,7 +57,8 @@
               <p>Индивидуальная съемка</p>
               <ul>
                 <li>Съемка для одного человека</li>
-                <li>Семейная съемка</li>
+                <li>Семейная съемка</li>                
+                <li>Модельные тесты</li>                
                 <li>Детская съемка</li>
                 <li>Love-story</li>
               </ul>
@@ -127,8 +128,16 @@
         <a class="back-arrow">
           <img src="./images/arrow-left.svg">
         </a>
-        <div class="img-wrapper">
-          <img class="img-spec" alt="Это основное фото выбранного типа съемки">
+        <div class="slick_carousel">
+          <img src="" alt="" class="item">
+          <img src="" alt="" class="item">
+          <img src="" alt="" class="item">
+          <img src="" alt="" class="item">
+          <img src="" alt="" class="item">
+          <img src="" alt="" class="item">
+          <img src="" alt="" class="item">
+          <img src="" alt="" class="item">
+          <img src="" alt="" class="item">
         </div>
         <div class="spec-wrap">
           <h3 class="spec-title">Здесь будет указан тип съемки</h3>
